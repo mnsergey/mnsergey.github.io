@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инженерная вентиляция: Оборудование и Монтаж под ключ</title>
+    <style>
+        :root {
+            --primary: #0073e6; 
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --vk: #0077ff;
+            --avito: #98ca32;
+            --ozon: #005bff;
+            --max-msg: #ff3366; 
+            --email-color: #e61919;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            background-color: var(--light);
+            line-height: 1.6;
+        }
+
+        header {
+            background: white;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-wrap {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            font-weight: bold;
+            font-size: 1.4rem;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .logo span { color: var(--dark); }
+
+        .phone-link {
+            font-weight: bold;
+            color: var(--primary);
+            text-decoration: none;
+            font-size: 1.1rem;
+            border: 2px solid var(--primary);
+            padding: 8px 15px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .phone-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #e0f2fe 0%, #f0fdf4 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #4b5563;
+        }
+
+        .btn {
+            background: var(--primary);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            display: inline-block;
+            box-shadow: 0 4px 6px rgba(0, 115, 230, 0.2);
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .section { padding: 60px 0; }
+        .section.alt { background: white; }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+
+        .grid {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            flex: 1 1 calc(33.333% - 40px);
+            min-width: 280px;
+            border-top: 4px solid var(--primary);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card.product-card {
+            border-top: 4px solid var(--ozon);
+        }
+
+        .card h3 { margin-top: 0; font-size: 1.3rem; color: #1e293b; }
+        
+        .price {
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1.2rem;
+            margin: 15px 0 0;
+        }
+
+        .card.product-card .price { color: var(--ozon); }
+
+        .card-link {
+            display: inline-block;
+            margin-top: 15px;
+            font-size: 0.95rem;
+            color: var(--ozon);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .card-link:hover { text-decoration: underline; }
+
+        .configurator-box {
+            background: #f1f5f9;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: left;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #cbd5e1;
+            font-size: 1rem;
+        }
+
+        #result-text {
+            margin-top: 25px;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid var(--primary);
+            font-weight: bold;
+            display: none;
+        }
+
+        .contacts {
+            background: #1e293b;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .contacts h2 { margin-bottom: 15px; }
+
+        .social-group-title {
+            font-size: 1.1rem;
+            margin-top: 25px;
+            color: #94a3b8;
+        }
+
+        .links-wrap {
+            margin: 20px 0 30px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .msg-btn {
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: 0.2s;
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .msg-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+
+        .tg { background: #229ed9; }
+        .wa { background: #25d366; }
+        .vk { background: var(--vk); }
+        .avito { background: var(--avito); }
+        .ozon { background: var(--ozon); }
+        .max { background: var(--max-msg); }
+        .email-btn { background: var(--email-color); }
+        
+        .copy-btn {
+            background: #475569;
+            color: white;
+            padding: 12px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+            transition: 0.2s;
+            display: inline-flex;
+            align-items: center;
+        }
+        .copy-btn:hover { background: #64748b; }
+
+        .email-container {
+            display: inline-flex;
+            gap: 5px;
+            position: relative;
+        }
+        
+        .tooltip {
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #10b981;
+            color: white;
+            padding: 6px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: normal;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            z-index: 10;
+        }
+        .tooltip.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        footer {
+            background: #0f172a;
+            color: #64748b;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 0.9rem;
+        }
+
+               @media (max-width: 768px) {
+            /* Уменьшаем заголовки под экраны телефонов */
+            .hero h1 { font-size: 1.8rem; }
+            .section-title { font-size: 1.6rem; }
+            
+            /* Шапка сайта и карточки услуг встают в один столбик */
+            .header-wrap { flex-direction: column; gap: 15px; }
+            .grid { flex-direction: column; }
+            
+            /* Кнопки мессенджеров выстраиваются в аккуратную плитку по 2 штуки в ряд */
+            .links-wrap {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                padding: 0 10px;
+            }
+            
+            .msg-btn {
+                width: 100%;
+                justify-content: center;
+                box-sizing: border-box;
+                padding: 12px 10px;
+                font-size: 0.9rem;
+            }
+
+            /* Кнопка почты растягивается на всю ширину под ними */
+            .email-container { 
+                width: 100%; 
+                padding: 0 10px;
+                box-sizing: border-box;
+            }
+            .email-container .msg-btn { 
+                width: 100%; 
+            }
+        }
+        /* Жестко задаем размеры для SVG-иконок, чтобы браузер их не сжимал */
+.msg-btn svg, .msg-icon {
+    width: 30px !important;
+    height: 30px !important;
+    fill: currentColor !important; /* Автоматически красит иконку в цвет текста кнопки */
+    display: inline-block !important;
+    vertical-align: middle !important;
+    flex-shrink: 0 !important; /* Защита от сжатия на смартфонах */
+}
+
+/* Центрируем содержимое внутри кнопок */
+.msg-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px !important; /* Отступ между иконкой и текстом */
+}
+
+    </style>
+
+</head>
+<body>
+
+    <header>
+        <div class="container header-wrap">
+            <a href="#" class="logo">Атмосфера<span>Климата</span></a>
+            <a href="tel:+79991234567" class="phone-link">📞 +7 (985) 000-00-00</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>Инженерная вентиляция: Оборудование и Монтаж</h1>
+                <p>Продажа готовых приточно-вытяжных установок, блоков автоматики собственной сборки и профессиональный монтаж в квартирах и частных домах.</p>
+                <a href="#contacts" class="btn">Связаться со специалистом</a>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Профессиональный монтаж</h2>
+                <p class="section-subtitle">Создаем правильный микроклимат в помещениях любой сложности</p>
+                <div class="grid">
+                    <div class="card">
+                        <div>
+                            <h3>Монтаж бытовых бризеров</h3>
+                            <p>Установка компактных приточных установок на готовый ремонт. Чистовое алмазное бурение с пылесосом за 1 час.</p>
+                        </div>
+                        <p class="price">от 25 000 ₽</p>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <h3>Разводка вентиляции в квартирах</h3>
+                            <p>Проектирование и скрытый монтаж компактных приточных систем за подвесными потолками в новостройках.</p>
+                        </div>
+                        <p class="price">Расчет по проекту</p>
+                    </div>
+                    <div class="card">
+                        <div>
+                            <h3>Вентиляция коттеджей</h3>
+                            <p>Монтаж энергоэффективных приточно-вытяжных систем с рекуперацией тепла, воздуховодами и автоматикой.</p>
+                        </div>
+                        <p class="price">Индивидуально</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section alt">
+            <div class="container">
+                <h2 class="section-title">Наше оборудование и автоматика</h2>
+                <p class="section-subtitle">Надежные технические решения для систем вентиляции</p>
+                <div class="grid">
+                    <div class="card product-card">
+                        <div>
+                            <h3>Приточно-вытяжные установки</h3>
+                            <p>Компактные вентиляционные установки для квартир и загородных домов. Простые в обслуживании и тихие.</p>
+                        </div>
+                        <div>
+                            <p class="price">В наличии</p>
+                            <a href="https://ozon.ru" class="card-link" target="_blank">Магазин на Ozon →</a>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div>
+                            <h3>Щиты и блоки автоматики</h3>
+                            <p>Готовые шкафы управления вентиляцией. Контроль температуры, скоростей и защита от замерзания калорифера.</p>
+                        </div>
+                        <div>
+                            <p class="price">Собственная сборка</p>
+                            <a href="https://ozon.ru" class="card-link" target="_blank">Смотреть на Ozon →</a>
+                        </div>
+                    </div>
+                    <div class="card product-card">
+                        <div>
+                            <h3>Компоненты и периферия</h3>
+                            <p>Канальные нагреватели, датчики температуры, воздушные заслонки и регуляторы скорости.</p>
+                        </div>
+                        <div>
+                            <p class="price">В наличии</p>
+                            <a href="https://ozon.ru" class="card-link" target="_blank">Каталог компонентов →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Подбор блока автоматики</h2>
+                <p class="section-subtitle">Ответьте на 2 вопроса, чтобы узнать базовый тип необходимого щита управления</p>
+                
+                <div class="configurator-box">
+                    <div class="form-group">
+                        <label for="heater">Тип нагревателя вентиляции:</label>
+                        <select id="heater">
+                            <option value="electric">Электрический калорифер</option>
+                            <option value="water">Водяной калорифер (требуется защита от замерзания)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phase">Питание вентилятора / системы:</label>
+                        <select id="phase">
+                            <option value="1">1-фазное (220 В)</option>
+                            <option value="3">3-фазное (380 В)</option>
+                        </select>
+                    </div>
+
+                    <button class="btn" onclick="calculateShield()">Подобрать щит</button>
+
+                    <div id="result-text"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacts" class="contacts">
+            <div class="container">
+                <h2>Контакты и Связь</h2>
+                <p>Выберите любой удобный способ для связи с нами. Мы проконсультируем вас по всем вопросам.</p>
+                
+                               <div class="social-group-title">Мессенджеры и площадки</div>
+                <div class="links-wrap">
+                <div class="links-wrap">
+    <!-- Кнопка MAX с кастомной SVG-иконкой сообщения -->
+    <a href="https://max.ru" target="_blank" class="msg-btn max">
+        <svg class="msg-icon" viewBox="0 0 24 24" xmlns="http://w3.org" fill="currentColor">
+            <path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+        </svg>
+        MAX
+    </a>
+
+    <!-- Кнопка Telegram с официальным SVG-самолетиком -->
+    <a href="https://t.me" target="_blank" class="msg-btn tg">
+        <svg class="msg-icon" viewBox="0 0 24 24" xmlns="http://w3.org" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 12-4.48 12-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-1-.65-.35-1 .22-1.62.15-.15 2.7-2.46 2.75-2.67.01-.03.01-.15-.06-.21-.07-.06-.17-.04-.25-.02-.11.02-1.78 1.14-5.05 3.34-.48.33-.91.49-1.29.48-.42-.01-1.22-.24-1.82-.44-.74-.24-.93-.37-.88-.78.03-.2.31-.41.85-.64 3.33-1.45 5.55-2.4 6.67-2.87 3.18-1.33 3.84-1.56 4.27-1.56.09 0 .31.02.45.13.12.1.15.24.17.34-.01.07.01.26 0 .4z"/>
+        </svg>
+        Telegram
+    </a>
+
+    <!-- Кнопка WhatsApp с официальной SVG-иконкой -->
+    <a href="https://wa.me/79991234567" target="_blank" class="msg-btn wa">
+        <svg class="msg-icon" viewBox="0 0 24 24" xmlns="http://w3.org" fill="currentColor">
+            <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.817 9.817 0 0 0 12.04 2zm5.79 13.96c-.24.69-1.23 1.34-1.69 1.43-.46.09-1.06.17-3.15-.69-2.68-1.11-4.37-3.85-4.51-4.04-.14-.19-1.1-1.46-1.1-2.79 0-1.33.7-1.99.94-2.26.24-.28.53-.35.71-.35.18 0 .35 0 .5.01.16.01.37-.06.57.43.2.5.69 1.69.75 1.82.06.13.1.28.01.46-.09.18-.13.29-.27.45-.14.16-.3.36-.43.48-.15.14-.3.29-.13.59.17.29.77 1.27 1.65 2.05.17.15.32.27.5.38.48.29.77.24.99-.02.22-.26.94-1.1.19-1.22-.15-.12-.48-.2-.79-.34-.3-.14-.52-.43-.52-.74 0-.33.27-.59.59-.59.26 0 1.95.96 2.07 1.03.12.07.2.11.23.17.03.06.03.35-.21 1.04z"/>
+        </svg>
+        WhatsApp
+    </a>
+
+    <!-- Кнопка VK с лаконичной официальной монограммой -->
+    <a href="https://vk.com/" target="_blank" class="msg-btn vk">
+        <svg class="msg-icon" viewBox="0 0 24 24" xmlns="http://w3.org" fill="currentColor">
+            <path d="M15.05 2h-6.1C4.42 2 2 4.42 2 8.95v6.1C2 19.58 4.42 22 8.95 22h6.1c4.53 0 6.95-2.42 6.95-6.95v-6.1C22 4.42 19.58 2 15.05 2zm3.62 12.44h-1.38c-.52 0-.68-.42-1.61-1.36-.81-.79-1.16-.89-1.36-.89-.28 0-.36.08-.36.47v1.27c0 .34-.11.51-.99.51-1.46 0-3.09-.89-4.24-2.54-1.72-2.42-2.19-4.26-2.19-4.6 0-.2.08-.39.42-.39h1.39c.31 0 .43.14.5.33.68 2.01 1.83 3.76 2.29 3.76.18 0 .26-.08.26-.53V8.8c-.05-.83-.49-.9-.49-1.2 0-.14.12-.28.32-.28h2.18c.27 0 .36.14.36.46v2.96c0 .32.09.43.2.43.18 0 .33-.11.66-.44.97-1.17 1.63-2.95 1.63-2.95.07-.16.21-.29.5-.29h1.39c.42 0 .52.21.43.51-.18.84-1.74 3.04-2.22 3.71-.16.22-.21.32 0 .59.16.2.7 1.01 1.32 1.86.73.99 1.1 1.54 1.19 1.8.09.28-.06.48-.48.48z"/>
+        </svg>
+        VK
+    </a>
+
+    <!-- Кнопка Avito с узнаваемой иконкой фирменного знака -->
+    <a href="https://avito.ru/" target="_blank" class="msg-btn avito">
+        <svg class="msg-icon" viewBox="0 0 24 24" xmlns="http://w3.org" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 12 10 12-4.48 12-10S17.52 2 12 2zm-1 4.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5S13.33 8 12.5 8 11 7.33 11 6.5zm-1.25 10.25c0-.41.34-.75.75-.75h.75V11c0-.41.34-.75.75-.75h2c.41 0 .75.34.75.75s-.34.75-.75.75h-.75v4.25h.75c.41 0 .75.34.75.75s-.34.75-.75.75h-3.5c-.41 0-.75-.34-.75-.75z"/>
+        </svg>
+        Avito
+    </a>
+
+    <!-- Кнопка Ozon с официальной корзиной/пакетом бренда -->
+    <a href="https://www.ozon.ru/" target="_blank" class="msg-btn ozon">
+        <svg class="msg-icon" viewBox="0 0 24 24" xmlns="http://w3.org" fill="currentColor">
+            <path d="M17.21 9l-4.38-6.56c-.19-.28-.51-.42-.83-.42-.32 0-.64.14-.83.43L6.79 9H2v2h2v9c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-9h2V9h-4.79zM9 9l3-4.5L15 9H9z"/>
+        </svg>
+        Ozon
+    </a>
+</div>
+<!-- БЛОК ЭЛЕКТРОННОЙ ПОЧТЫ (С жестким сбросом обтекания сетки) -->
+<div class="social-group-title" style="display: block !important; clear: both !important; width: 100% !important;  !imargin-top: 20pxmportant; margin-bottom: 15px !important; font-weight: bold; color: #94a3b8; text-align: center !important;">
+    Электронная почта
+</div>
+
+<div style="display: flex !important; justify-content: center !important; width: 100% !important; margin-bottom: 30px !important; clear: both !important;">
+    <div class="email-container" style="position: relative; display: inline-block;">
+        
+        <button type="button" class="msg-btn email-btn" onclick="handleEmailClick(event, 'mn12345@yandex.ru')">
+            <svg viewBox="0 0 24 24" xmlns="http://w3.org"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+            mn12345
+            
+mn12345@yandex.ru
+        </button>
+
+        <div class="tooltip" id="email-tooltip" style="display: none; position: absolute; top: -40px; left: 50%; transform: translateX(-50%); background: #333; color: #fff; padding: 6px 10px; border-radius: 4px; font-size: 12px; z-index: 1000; white-space: nowrap; box-shadow: 0 2px 5px rgba(0,0,0,0.2);">
+            Скопировано!
+        </div>
+
+    </div>
+</div>
+
+
+
+<script>
+function handleEmailClick(event, email) {
+    // 1. Копируем адрес в буфер обмена
+    navigator.clipboard.writeText(email).then(() => {
+        const tooltip = document.getElementById('email-tooltip');
+        if (tooltip) {
+            tooltip.style.setProperty('display', 'block', 'important');
+            tooltip.style.setProperty('opacity', '1', 'important');
+            tooltip.style.setProperty('visibility', 'visible', 'important');
+            
+            setTimeout(() => {
+                tooltip.style.display = 'none';
+                tooltip.style.opacity = '0';
+                tooltip.style.visibility = 'hidden';
+            }, 2000);
+        }
+    }).catch(err => {
+        console.error('Не удалось скопировать: ', err);
+    });
+
+    // 2. Стабильное открытие Яндекс Почты
+    window.open('https://mail.yandex.ru', '_blank', 'noopener,noreferrer');
+}
+</script>
+
+    </div>
+</div>
+
+
+        </section>
+
+    </main>
+
+        <footer>
+            <div class="container">
+                <p>&copy; 2024 Атмосфера Климата. Все права защищены.</p>
+                <p style="font-size: 0.85rem; color: #94a3b8;">
+                    Сайт-визитка для демонстрации решений по вентиляции и автоматике. 
+                    Не является публичной офертой.
+                </p>
+            </div>
+        </footer>
+
+                <script>
+            // Отличный рабочий калькулятор
+            function calculateShield() {
+                const heater = document.getElementById('heater').value;
+                const phase = document.getElementById('phase').value;
+                const resultText = document.getElementById('result-text');
+
+                let recommendation = '';
+
+                if (heater === 'electric' && phase === '1') {
+                    recommendation = 'Рекомендуем щит управления для 1‑фазного вентилятора с электрическим нагревом и термостатом защиты от перегрева.';
+                } else if (heater === 'electric' && phase === '3') {
+                    recommendation = 'Подойдёт щит для 3‑фазного двигателя с электрическим калорифером, потребуется реле контроля фаз и термостат.';
+                } else if (heater === 'water' && phase === '1') {
+                    recommendation = 'Нужен щит с контролем температуры обратной воды и защитой от замерзания, питание 1‑фазное.';
+                } else {
+                    recommendation = 'Для 3‑фазной системы с водяным калорифером требуется щит с каскадным управлением и датчиком температуры обратной воды.';
+                }
+
+                resultText.style.display = 'block';
+                resultText.textContent = recommendation;
+            }
+
+            // Функция копирования
+            function copyEmailAddress(email) {
+                navigator.clipboard.writeText(email).then(() => {
+                    const tooltip = document.getElementById('copy-tooltip');
+                    if (tooltip) {
+                        tooltip.classList.add('show');
+                        setTimeout(() => {
+                            tooltip.classList.remove('show');
+                        }, 2000);
+                    }
+                }).catch(err => {
+                    console.error('Не удалось скопировать: ', err);
+                });
+            }
+        </script>
+
+    <!-- Виджет онлайн-чата Teletype App -->
+    <script>
+    // СНАЧАЛА жестко передаем ID скрипта глобальному объекту window
+    window.teletypeExternalId = "jlre1tW9AI4abC8Ata-vBcMSB02C7mI1PlAjsbk6mg9evRr6_Mq2SSGLgCZK3P-n";
+
+    if(!window._teletypeWidget){
+        window._teletypeWidget = window._teletypeWidget || {};
+        !function(){
+            var t = document.getElementsByTagName("app-teletype-root");
+            if (t.length > 0 && _teletypeWidget.init) return;
+            var d = new Date().getTime();
+            var n = document.createElement("script"),
+                c = document.getElementsByTagName("script")[0];
+            n.id = "teletype-widget-embed";
+            n.src = "https://widget.teletype.app/init.js?_=" + d;
+            n.async = !0;
+            n.setAttribute("data-embed-version", "0.1");
+            c.parentNode.insertBefore(n, c);
+        }();
+        document.addEventListener("teletype.ready", function(){
+            console.log("Teletype ready");
+        });
+    }
+    </script>
+
+</body>
+</html>
